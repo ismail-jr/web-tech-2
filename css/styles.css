@@ -1,0 +1,162 @@
+/* Custom Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  padding-top: 56px;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: #f5f5f5; /* Light Grey Background */
+  /* padding: 10px 0; */
+  height: 55px;
+}
+
+.navbar-brand {
+  padding-left: 80px;
+  padding-bottom: 10px;
+}
+
+.navbar-brand img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  padding-right: 80px;
+}
+
+.nav-item a {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+  color: #0e0e0e;
+}
+
+/* Offcanvas Styling (Small Screens) */
+.offcanvas {
+  background: #f5f5f5;
+}
+
+.offcanvas-body .nav-item a {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.offcanvas-body .nav-item a:hover {
+  color: #0e0e0e;
+}
+/* Scrolling Text Styles */
+.scrolling-text-container {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 50px;
+}
+
+.scrolling-text {
+  font-size: 18px;
+  color: #333;
+  position: absolute;
+  white-space: nowrap;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+/* Container for the Cards */
+.cards-container {
+  width: 100%;
+  overflow-x: auto; /* Horizontal scroll bar */
+  white-space: nowrap; /* Prevent wrapping of cards */
+  padding-bottom: 10px; /* Space for scroll bar */
+}
+
+/* Scrollable Cards */
+.cards-scroll {
+  display: inline-flex; /* Display cards in a row */
+  gap: 15px; /* Space between cards */
+}
+
+/* Card Styles */
+.card {
+  display: inline-block; /* Ensure cards stay in a row */
+  width: 18rem; /* Fixed width for each card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+  overflow: hidden; /* Ensure content stays within the card */
+  background-color: #fff; /* White background */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images fit well */
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-body h5 {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+/* Arrow Styles */
+.arrow i {
+  font-size: 30px;
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-left: 10px; /* Space between arrows */
+  color: #007bff; /* Blue color for arrows */
+}
+
+.arrow i:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+.btn-home {
+  background: #f5f5f5;
+  color: #0e0e0e;
+  border: none;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.btn-home:hover {
+  background: #c4c2c2;
+  color: #0e0e0e;
+}
+/* footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px;
+} */

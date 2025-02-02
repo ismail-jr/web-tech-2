@@ -1,5 +1,8 @@
 <?php include 'includes/db.php'; ?>
 <?php include 'includes/navbar.php'; ?>
+<?php include 'includes/categoryNav.php'; ?>
+
+
 
 <section class="container">
    <!-- Scrolling Text -->
@@ -38,6 +41,7 @@
     </div>
   </div>
 </section>
+<?php include './functions/products.php' ?>
 
 
 <div class="container">

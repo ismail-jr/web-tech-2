@@ -22,7 +22,6 @@ CREATE TABLE products (
     name VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10,2) NOT NULL CHECK (price > 0),
-    stock INT UNSIGNED NOT NULL CHECK (stock >= 0),
     category_id INT UNSIGNED,
     image VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -63,17 +62,6 @@ CREATE TABLE payments (
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
--- ⭐ PRODUCT REVIEWS TABLE
-CREATE TABLE reviews (
-    review_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id INT UNSIGNED NOT NULL,
-    product_id INT UNSIGNED NOT NULL,
-    rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),
-    comment TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
-);
 
 -- 🛒 CART TABLE (Temporary storage before checkout)
 CREATE TABLE cart (

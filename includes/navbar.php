@@ -32,7 +32,16 @@
           <li class="nav-item"><a class="nav-link" href="index.php">Home <span >|</span>  </a></li>
           <li class="nav-item"><a class="nav-link" href="about.php">About <span>|</span></a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact <span>|</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>
+<?php session_start(); ?>
+<li class="nav-item">
+  <?php if (isset($_SESSION['user_id'])): ?>
+    <a class="nav-link" href="#">👤 <?php echo htmlspecialchars($_SESSION['full_name']); ?></a>
+    <a class="nav-link" href="logout.php">Logout</a>
+  <?php else: ?>
+    <a class="nav-link" href="signup.php">Sign Up</a>
+    <a class="nav-link" href="signin.php">Login</a>
+  <?php endif; ?>
+</li>
         </ul>
       </div>
     </div>
@@ -49,7 +58,15 @@
         <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>
+<li class="nav-item">
+  <?php if (isset($_SESSION['user_id'])): ?>
+    <a class="nav-link" href="#">👤 <?php echo htmlspecialchars($_SESSION['full_name']); ?></a>
+    <a class="nav-link" href="logout.php">Logout</a>
+  <?php else: ?>
+    <a class="nav-link" href="signup.php">Sign Up</a>
+    <a class="nav-link" href="signin.php">Login</a>
+  <?php endif; ?>
+</li>
       </ul>
     </div>
   </div>

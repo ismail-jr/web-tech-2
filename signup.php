@@ -74,30 +74,36 @@ include 'includes/navbar.php';
               <?php endif; ?>
             </div>
 
-            <!-- Password -->
-            <div class="col-md-6 mb-3">
-              <label for="password" class="form-label">Password</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
-              </div>
-              <?php if (isset($errors['password'])): ?>
-                  <small class="text-danger"><?php echo $errors['password']; ?></small>
-              <?php endif; ?>
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="col-md-6 mb-3">
-              <label for="confirmPassword" class="form-label">Confirm Password</label>
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                <input type="password" id="confirmPassword" name="confirm_password" class="form-control" placeholder="Re-enter your password" required>
-              </div>
-              <?php if (isset($errors['confirm_password'])): ?>
-                  <small class="text-danger"><?php echo $errors['confirm_password']; ?></small>
-              <?php endif; ?>
-            </div>
+        <!-- Password -->
+        <div class="col-md-6 mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+            <span class="input-group-text" onclick="togglePassword('password', 'eyeIconSignUp')">
+              <i id="eyeIconSignUp" class="bi bi-eye"></i> <!-- Eye icon -->
+            </span>
           </div>
+          <?php if (isset($errors['password'])): ?>
+              <small class="text-danger"><?php echo $errors['password']; ?></small>
+          <?php endif; ?>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="col-md-6 mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+            <input type="password" id="confirmPassword" name="confirm_password" class="form-control" placeholder="Re-enter your password" required>
+            <span class="input-group-text" onclick="togglePassword('confirmPassword', 'eyeIconConfirmSignUp')">
+              <i id="eyeIconConfirmSignUp" class="bi bi-eye"></i> <!-- Eye icon -->
+            </span>
+          </div>
+          <?php if (isset($errors['confirm_password'])): ?>
+              <small class="text-danger"><?php echo $errors['confirm_password']; ?></small>
+          <?php endif; ?>
+        </div>
+
 
           <!-- Terms & Conditions Checkbox -->
           <div class="form-check mb-3">

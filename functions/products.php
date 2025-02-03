@@ -1,5 +1,4 @@
 <?php
-
 // Get the selected category from the URL or set 'all' if no category is selected
 $category_filter = isset($_GET['category']) ? $_GET['category'] : 'all';
 
@@ -8,7 +7,6 @@ $query = "SELECT p.product_id, p.name, p.description, p.price, p.image, c.name A
           FROM products p 
           JOIN categories c ON p.category_id = c.category_id";
 
-// Add filtering if a specific category is selected
 if ($category_filter !== 'all') {
     $query .= " WHERE c.name = ?";
     $stmt = $conn->prepare($query);
@@ -19,7 +17,7 @@ if ($category_filter !== 'all') {
     $result = $conn->query($query);
 }
 
-// Fetch the products
+// Fetch products
 $products = [];
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -34,70 +32,43 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        .card {
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-        span {
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/product.css"> <!-- External CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons -->
 </head>
 <body>
+<div class="container">
+<header>
+        <h1>Latest & Greatest</h1>
+    </header>
 
-    <!-- Category Navbar -->
+    <main class="product-container">
+        <?php if (!empty($products)): ?>
+            <?php foreach ($products as $product): ?>
+                <div class="product-card">
+                    <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                    <div class="product-info">
+                        <h2><?php echo htmlspecialchars($product['name']); ?></h2>
+                        <p><?php echo htmlspecialchars($product['description']); ?></p>
+                        <p class="price">₵<?php echo htmlspecialchars($product['price']); ?></p>
+                        <button class="add-to-cart" 
+                            data-id="<?php echo $product['product_id']; ?>"
+                            data-name="<?php echo htmlspecialchars($product['name']); ?>"
+                            data-price="<?php echo htmlspecialchars($product['price']); ?>"
+                            data-image="<?php echo htmlspecialchars($product['image']); ?>">
+                            <i class="bi bi-bag fs-4"></i>
+                        </button>
 
-    <div class="container mt-5">
-        <h3 class="mb-5">Latest & Greatest</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <?php if (!empty($products)): ?>
-                <?php foreach ($products as $product): ?>
-                    <div class="col">
-                        <div class="card h-100 shadow">
-                            <!-- Product Image -->
-                            <img src="<?php echo htmlspecialchars($product['image']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($product['name']); ?>">
-                            <div class="card-body">
-                                <!-- Product Name -->
-                                <h5 class="card-title">
-                                    <span><?php echo htmlspecialchars($product['name']); ?></span>
-                                </h5>
-                                <!-- Product Description -->
-                                <p class="card-text" style="padding-top:5px;"><?php echo htmlspecialchars($product['description']); ?></p>
-                                <!-- Product Price -->
-                                <p class="card-text">
-                                    <strong>Price:</strong> $<?php echo htmlspecialchars($product['price']); ?>
-                                </p>
-                                <!-- Add to Cart Button -->
-                                <button class="btn btn-primary w-100">
-                                    <i class="bi bi-cart"></i> Add to Cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            <?php else: ?>
-                <div class="col">
-                    <div class="alert alert-warning text-center" role="alert">
-                        No products found.
                     </div>
                 </div>
-            <?php endif; ?>
-        </div>
-    </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="no-products">No products found.</p>
+        <?php endif; ?>
+    </main>
+</div>
+    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

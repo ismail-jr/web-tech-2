@@ -43,11 +43,15 @@ include 'includes/navbar.php';
             <div class="input-group">
               <span class="input-group-text"><i class="bi bi-lock"></i></span>
               <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+              <span class="input-group-text" onclick="togglePassword('password', 'eyeIconSignIn')">
+                <i id="eyeIconSignIn" class="bi bi-eye"></i> <!-- Eye icon -->
+              </span>
             </div>
             <?php if (isset($errors['password'])): ?>
                 <small class="text-danger"><?php echo $errors['password']; ?></small>
             <?php endif; ?>
           </div>
+
 
           <!-- Remember Me & Forgot Password -->
           <div class="d-flex justify-content-between mb-3">

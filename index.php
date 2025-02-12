@@ -70,10 +70,10 @@
     <div class="cards-scroll" id="cardsScroll">
       <!-- Card 1 -->
       <div class="card">
-        <img src="assets/images/Ismail.jpg" class="card-img-top" alt="Jibriel Ismail">
+        <img src="assets/images/shallom.jpg" class="card-img-top" alt="Jibriel Ismail">
         <div class="card-body">
-          <h3>JIBRIEL ISMAIL</h3>
-          <h5>PS/ITC/22/0012</h5>
+          <h3>SHALOM ACQUAH</h3>
+          <h5>PS/ITC/22/0248</h5>
         </div>
       </div>
       <!-- Card 2 -->
@@ -81,28 +81,28 @@
         <img src="assets/images/fred.jpg" class="card-img-top" alt="Jibriel Ismail">
         <div class="card-body">
           <h3>FREDRICK DOGBATSEY</h3>
-          <h5>PS/ITC/22/0012</h5>
+          <h5>PS/ITC/22/0130</h5>
         </div>
       </div>
       <!-- Card 3 -->
       <div class="card">
-        <img src="assets/images/Ismail.jpg" class="card-img-top" alt="Jibriel Ismail">
+        <img src="assets/images/ben.jpg" class="card-img-top" alt="Jibriel Ismail">
         <div class="card-body">
-          <h3>JIBRIEL ISMAIL</h3>
-          <h5>PS/ITC/22/0012</h5>
+          <h3>BENEDICT QUAICOE</h3>
+          <h5>PS/ITC/22/0051</h5>
         </div>
       </div>
       <!-- Card 4 -->
       <div class="card">
-        <img src="assets/images/Ismail.jpg" class="card-img-top" alt="Jibriel Ismail">
+        <img src="assets/images/josh.jpg" class="card-img-top" alt="Jibriel Ismail">
         <div class="card-body">
-          <h3>JIBRIEL ISMAIL</h3>
-          <h5>PS/ITC/22/0012</h5>
+          <h3>AGBENYEGAH JOSHUA</h3>
+          <h5>PS/ITC/22/0245</h5>
         </div>
       </div>
       <!-- Card 5 -->
       <div class="card">
-        <img src="assets/images/ismail3.1.jpg" class="card-img-top" alt="Jibriel Ismail">
+        <img src="assets/images/Ismail.jpg" class="card-img-top" alt="Jibriel Ismail">
         <div class="card-body">
           <h3>JIBRIEL ISMAIL</h3>
           <h5>PS/ITC/22/0012</h5>
@@ -110,20 +110,20 @@
       </div>
       <!-- Card 6 -->
       <div class="card">
-        <img src="assets/images/ismail1.jpg" class="card-img-top" alt="Jibriel Ismail">
+        <img src="assets/images/Ishamel.jpg" class="card-img-top" alt="Ishmael Botwe">
         <div class="card-body">
-          <h3>JIBRIEL ISMAIL</h3>
-          <h5>PS/ITC/22/0012</h5>
+          <h3>ISHMAEL BOTWE</h3>
+          <h5>PS/ITC/22/0135</h5>
         </div>
       </div>
       <!-- Card 7 -->
-      <div class="card">
-        <img src="assets/images/ismail2.jpg" class="card-img-top" alt="Jibriel Ismail">
+      <!-- <div class="card">
+        <img src="assets/images/isma.jpg" class="card-img-top" alt="Jibriel Ismail">
         <div class="card-body">
           <h3>JIBRIEL ISMAIL</h3>
           <h5>PS/ITC/22/0012</h5>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<footer class="text-dark text-center py-3 mt-5">
+<footer class="text-dark text-center py-3 mt-5 mb-1">
     <p>&copy; 2025 JJ & Sons. All rights reserved.</p>
   </footer>
   <!-- Bootstrap JavaScript -->

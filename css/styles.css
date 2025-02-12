@@ -68,7 +68,7 @@ body {
 
 .scrolling-text {
   font-size: 30px;
-  color: #e05d50;
+  color: #007bff;
   position: absolute;
   white-space: nowrap;
   animation: scrollText 10s linear infinite;
@@ -140,7 +140,7 @@ body {
   color: #0056b3; /* Darker blue on hover */
 }
 .btn-home {
-  background: #e05d50;
+  background: #007bff;
   color: #fff;
   border: none;
   padding: 4px 8px;
@@ -149,7 +149,7 @@ body {
   font-weight: 600;
 }
 .btn-home:hover {
-  background: #e97469;
+  background: #0f75e2;
   color: #f7f7f7;
 }
 /* Image fade-in and fade-out effects */

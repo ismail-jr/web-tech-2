@@ -6,15 +6,15 @@
 $cart_items = [
     [
         'id' => 1,
-        'name' => 'Nike Air Max 270',
-        'image' => 'https://via.placeholder.com/150',
+        'name' => 'Everyday perfume',
+        'image' => 'assets/images/perfume.jpg',
         'price' => 150.00,
         'quantity' => 2,
     ],
     [
         'id' => 2,
-        'name' => 'Nike React Infinity Run',
-        'image' => 'https://via.placeholder.com/150',
+        'name' => 'Coffee Maker',
+        'image' => 'assets/images/coffeemaker.jpg',
         'price' => 130.00,
         'quantity' => 1,
     ],
@@ -133,7 +133,7 @@ foreach ($cart_items as $item) {
 
     <!-- Cart Page Content -->
     <div class="container py-5">
-        <h1 class="mb-4">Your Cart</h1>
+        <h1 class="mb-4">Your Bag</h1>
 
         <!-- Cart Items -->
         <div class="cart-items">
@@ -188,6 +188,7 @@ foreach ($cart_items as $item) {
             <button class="btn-checkout">Checkout</button>
         </div>
     </div>
+    
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -131,8 +131,11 @@ if ($category_result->num_rows > 0) {
 <body>
     <!-- Custom Navbar -->
     <nav class="custom-navbar fixed-top">
-        <a href="admin_dashboard.php" class="logo">
-            <i class="bi bi-house"></i> Admin Dashboard
+        <a href="index.php" class="logo">
+            <i class="bi bi-house"></i> Homepage
+        </a>
+         <a href="admin_dashboard.php" class="logo">
+            <i class="bi bi-database"></i> Admin Dashboard
         </a>
         <form action="logout.php" method="POST">
             <button type="submit" class="logout-btn">

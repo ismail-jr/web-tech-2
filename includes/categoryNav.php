@@ -27,9 +27,9 @@
       padding: 8px 15px;
       transition: color 0.3s ease-in-out;
     }
-    .shop-navbar .nav-link:hover, .shop-navbar .nav-link.active {
-      color:#e05d50; /* Nike-style hover effect */
-    }
+    /* .shop-navbar .nav-link:hover, .shop-navbar .nav-link.active {
+      color:#007bff;
+    } */
     .cart-icon {
       position: relative;
     }
@@ -45,6 +45,9 @@
       height: 20px;
       text-align: center;
       border-radius: 50%;
+    }
+    .nav-co{
+      padding-top: 200px;
     }
     /* Responsive Adjustments */
     @media (max-width: 768px) {
@@ -67,7 +70,7 @@
 
   <!-- Product Filter Navbar -->
   <nav class="navbar navbar-expand-lg shop-navbar py-5">
-    <div class="container">
+    <div class="container nav-co">
       
       <!-- Product Categories -->
       <div class="d-flex mx-auto">

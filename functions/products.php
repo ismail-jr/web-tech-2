@@ -36,9 +36,10 @@ if ($result->num_rows > 0) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> <!-- Bootstrap Icons -->
 </head>
 <body>
+
 <div class="container">
-<header>
-        <h1>Latest & Greatest</h1>
+    <header>
+        <h1>Shop Our Collection</h1>
     </header>
 
     <main class="product-container">
@@ -46,18 +47,18 @@ if ($result->num_rows > 0) {
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
                     <img src="<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                    <span class="category-badge"><?php echo htmlspecialchars($product['category_name']); ?></span>
                     <div class="product-info">
                         <h2><?php echo htmlspecialchars($product['name']); ?></h2>
-                        <p><?php echo htmlspecialchars($product['description']); ?></p>
+                        <p class="description"><?php echo htmlspecialchars($product['description']); ?></p>
                         <p class="price">₵<?php echo htmlspecialchars($product['price']); ?></p>
                         <button class="add-to-cart" 
                             data-id="<?php echo $product['product_id']; ?>"
                             data-name="<?php echo htmlspecialchars($product['name']); ?>"
                             data-price="<?php echo htmlspecialchars($product['price']); ?>"
                             data-image="<?php echo htmlspecialchars($product['image']); ?>">
-                            <i class="bi bi-bag fs-4"></i>
+                           <a href="cart.php" style="text-decoration:none; color:white;"> <i class="bi bi-bag fs-4"></i> Add to Bag</a>
                         </button>
-
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -66,9 +67,8 @@ if ($result->num_rows > 0) {
         <?php endif; ?>
     </main>
 </div>
-    
 
-  <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+<script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
